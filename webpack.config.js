@@ -8,10 +8,12 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, 'public'),
-    publicPath: '/public/',
+    publicPath: '/',
     filename: 'bundle.js',
   },
-
+  devServer: {
+    contentBase: path.join(__dirname, 'public'),
+  },
   module: {
     rules: [
       {
